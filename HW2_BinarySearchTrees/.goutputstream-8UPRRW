@@ -1,0 +1,112 @@
+//
+// binary_search_tree.cpp
+//
+// Please refer to binary_search_tree.h for documentation.
+//
+
+#include <iostream>
+
+#include "binary_search_tree.h"
+
+bt_node* init_node(int data) {
+	bt_node* new_node = new bt_node;
+	new_node->data = data;
+	new_node->left = NULL;
+	new_node->right = NULL;
+	return new_node;
+}
+
+void insert_recursive(bt_node** top_ref, bt_node* new_node){
+	bt_node* top = *top_ref;
+	if(top == NULL){
+		top = new_node;
+	} else {
+		if(top->data > new_node->data){
+			insert_recursive(top->left, new_node);
+			} else {
+				insert_recursive(top->right, new_node);
+				}
+	}
+}
+
+void insert(bt_node** top_ref, bt_node* new_node) {
+	if(*top_ref == NULL){
+		*top_ref = new_node;
+	}
+	else{
+		bt_node* top = *top_ref;
+		if(top->data > new_node->data){
+			insert_recursive(top->left, new_node);
+			}
+			else{
+				insert_recursive(top->right, new_node);
+				}
+			}
+		//
+		
+// implement me
+}
+
+void insert_data(bt_node** top_ref, int data) {
+	bt_node* new_node = init_node(data);
+	insert(top_ref, new_node);
+}
+
+void remove(bt_node** top_ref, int data) {
+/*	n=get_node(top_ref, data);
+	if(n == NULL){
+		return;}
+	if(n->left == NULL && n->right == NULL){
+		n.parent.right = NULL // tricky
+		delete(n);
+	}
+	if(n->left == NULL || n->right == NULL){
+		n.parent.right = n->left(right)
+		
+	}
+	*/
+  // implement me
+}
+
+bool contains(bt_node* top, int data) {
+	if(top == NULL){
+		return false;
+	}
+	else{
+		if(data == top->data){
+			return true;
+			}
+			else{
+				if (data < top->data){ return (contains(top->left, data));}
+					else{ return (contains(top->right, data));}
+				}
+		}
+}
+
+bt_node* get_node(bt_node* top, int data) {
+	bt_node* pointer = top;
+	if(contains(pointer, data) == true){
+		return pointer;
+	}else{
+		return NULL;
+	}		
+			
+// implement me
+}
+
+int size(bt_node* top) {
+	if (top == NULL){
+		return 0;
+	}else{
+		return (size(top->left) + 1 + size(top->right));
+	}
+}
+
+void to_array(bt_node* top, int arr[]) {
+	bt_node* pointer = top;
+	int arr_size = size(top);
+	for(int i = 0; i < arr_size ; i++){
+	}
+	
+  // implement me
+}

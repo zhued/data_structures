@@ -1,0 +1,38 @@
+graph btree {
+label="Before"
+    BT_90ad008 [label="14 23 32"];
+    BT_90ad1c8 [label="5 8 11"];
+    BT_90ad008 -- BT_90ad1c8;
+    BT_90ad078 [label="1 2 3 4"];
+    BT_90ad1c8 -- BT_90ad078;
+    BT_90ad3c0 [label="6 7"];
+    BT_90ad1c8 -- BT_90ad3c0;
+    BT_90ad350 [label="9 10"];
+    BT_90ad1c8 -- BT_90ad350;
+    BT_90ad318 [label="12 13"];
+    BT_90ad1c8 -- BT_90ad318;
+    BT_90ad388 [label="17 20"];
+    BT_90ad008 -- BT_90ad388;
+    BT_90ad2e0 [label="15 16"];
+    BT_90ad388 -- BT_90ad2e0;
+    BT_90ad270 [label="18 19"];
+    BT_90ad388 -- BT_90ad270;
+    BT_90ad238 [label="21 22"];
+    BT_90ad388 -- BT_90ad238;
+    BT_90ad2a8 [label="26 29"];
+    BT_90ad008 -- BT_90ad2a8;
+    BT_90ad200 [label="24 25"];
+    BT_90ad2a8 -- BT_90ad200;
+    BT_90ad158 [label="27 28"];
+    BT_90ad2a8 -- BT_90ad158;
+    BT_90ad120 [label="30 31"];
+    BT_90ad2a8 -- BT_90ad120;
+    BT_90ad190 [label="35 38"];
+    BT_90ad008 -- BT_90ad190;
+    BT_90ad0e8 [label="33 34"];
+    BT_90ad190 -- BT_90ad0e8;
+    BT_90ad0b0 [label="36 37"];
+    BT_90ad190 -- BT_90ad0b0;
+    BT_90ad040 [label="39 40"];
+    BT_90ad190 -- BT_90ad040;
+}
